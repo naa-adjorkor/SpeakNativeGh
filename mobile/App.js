@@ -4,8 +4,8 @@ import AuthNavigator from './src/navigation/AuthNavigator'
 
 export default function App() {
   return (
-    <View>
+    <>
       <AuthNavigator/>
-    </View>
+    </>
   )
 }
