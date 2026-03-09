@@ -1,11 +1,18 @@
-import { View, Text } from 'react-native'
 import React from 'react'
-import AuthNavigator from './src/navigation/AuthNavigator'
+import { ClerkProvider } from '@clerk/expo'
+import { tokenCache } from '@clerk/expo/token-cache'
+import RootNavigator from './src/navigation/RootNavigator'
 
-export default function App() {
+const publishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY
+
+if (!publishableKey) {
+  throw new Error(publishableKey)
+}
+
+export default function RootLayout() {
   return (
-    <>
-      <AuthNavigator/>
-    </>
+    <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
+      <RootNavigator />
+    </ClerkProvider>
   )
 }
