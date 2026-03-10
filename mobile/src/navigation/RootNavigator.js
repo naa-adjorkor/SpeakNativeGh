@@ -5,11 +5,8 @@ import AuthRoute from "./AuthRoute";
 import AppRoute from "./AppRoute";
 
 export default function RootNavigator() {
-  const { isSignedIn, isLoaded } = useAuth();
+  const { isSignedIn } = useAuth();
 
-  if (!isLoaded) {
-    return null;
-  }
 
   return (
     <NavigationContainer>

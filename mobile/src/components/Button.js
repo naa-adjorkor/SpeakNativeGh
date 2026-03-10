@@ -27,6 +27,7 @@ export const btnStyles = StyleSheet.create({
     textAlign: "center",
   },
   secBtn:{
+    flexDirection:"row",
     borderWidth:1,
     borderColor:COLORS.primaryGreen,
     paddingVertical: 12,

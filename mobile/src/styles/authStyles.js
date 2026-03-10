@@ -60,7 +60,9 @@ export const authStyles = StyleSheet.create({
   },
 
   passwordInput:{
-    flex:1
+    flex:1,
+    borderWidth:0,
+    outlineStyle:"none"
   },
 
   orContainer:{
@@ -93,4 +95,12 @@ export const authStyles = StyleSheet.create({
     color: COLORS.primaryGreen,
     fontWeight: '500',
   },
+
+  errorText: {
+    color: COLORS.error,
+    fontSize: 14,
+    marginTop: 10,
+    marginBottom: 10,
+    textAlign: "center"
+  }
 });

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ClerkProvider } from '@clerk/expo'
+import { ClerkProvider } from '@clerk/clerk-expo'
 import { tokenCache } from '@clerk/expo/token-cache'
 import RootNavigator from './src/navigation/RootNavigator'
 
